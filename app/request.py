@@ -51,4 +51,20 @@ def search_news(topic):
             search_news_results = process_results(search_news_list)
     
     return search_news_results
+def sources_news():
+    '''
+    Function to search news sources
+    '''
+    sources_url = "https:/newsapi.org/v2/sources?apiKey{}".format(api_key)
+    
+    with urllib.request.urlopen(sources_url) as url:
+        search_sources_data = url.read()
+        search_sources_response = json.loads(search_sources_data)
+        
+        search_sources_results = None
+        if search_sources_response["sources"]:
+            search_sources_list = search_sources_response["sources"]
+            search_sources_results = process_sources(search_sources_list)
+    
+    return search_sources_results
 
