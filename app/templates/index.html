@@ -21,6 +21,15 @@
 
 <body>
 
-  
+    {% extends 'base.html' %}
+
+    {% import 'macros.html' as macro %}
+
+    <!-- Content Block-->
+    {% block content%}
+    <div class="container">
+            {{ macro.displayNewsList(top) }}
+    </div>
+    {% endblock %}
 </body>
 </html>
