@@ -11,3 +11,10 @@ def index():
 
     title = "News headlines"
     return render_template("index.html", title = title, top=top_headlines)
+
+@main.route("/search/<news_name>")
+def search(news_name):
+    '''
+    function to display the search results
+    '''
+    return render_template("search.html", news = searched_news)
