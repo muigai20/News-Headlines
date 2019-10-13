@@ -68,3 +68,30 @@ def sources_news():
     
     return search_sources_results
 
+def process_results(news_list):
+    '''
+    Function that processes the news result and transform them to a list of Objects
+
+    Args:
+        news_list: A list of dictionaries that contain movie details
+
+    Returns:
+        news_results: A list of news objects
+    '''
+
+    news_results = []
+    
+    for news_item in news_list:
+        author = news_item.get("author")
+        title = news_item.get("title")
+        description = news_item.get("description")
+        url = news_item.get("url")
+        urlToImage = news_item.get("urlToImage")
+        content = news_item.get("content")
+        
+        if urlToImage:
+            news_object = News(author, title, description, url, urlToImage, content)
+            news_results.append(news_object)
+    
+    return news_results
+
