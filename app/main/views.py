@@ -18,3 +18,11 @@ def search(news_name):
     function to display the search results
     '''
     return render_template("search.html", news = searched_news)
+
+@main.route("/sources")
+def source():
+    '''
+    view function to display sources of news
+    '''
+    source = sources_news()
+    return render_template("sources.html", source = source)
