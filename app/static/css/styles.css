@@ -1,0 +1,17 @@
+h3{
+    
+    word-wrap: break-word;
+}
+
+h1 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-size: 70px;
+    word-wrap: break-word;
+    color: white
+}
+heading {
+    text-align: center;
+    font-family: 'Allura';
+    background-color: #222;
+}
