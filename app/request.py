@@ -95,3 +95,23 @@ def process_results(news_list):
     
     return news_results
 
+
+def process_sources(sources_list):
+    '''
+     Function that processes the news source and transform them to a list of Objects
+    '''
+    sources_results = []
+    
+    for sources_item in sources_list:
+        id = sources_item.get("id")
+        name = sources_item.get("name")
+        description = sources_item.get("description")
+        url = sources_item.get("url")
+        category = sources_item.get("category")
+        
+        if url:
+            sources_object = Sources(id, name, description, url, category)
+            sources_results.append(sources_object)
+    
+    return sources_results
+
