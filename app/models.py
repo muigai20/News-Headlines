@@ -9,7 +9,7 @@ class Sources:
         self.url = url
         self.category = category
     
-    class News:
+class News:
     '''
     News class to define News Objects
     '''

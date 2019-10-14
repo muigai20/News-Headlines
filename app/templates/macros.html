@@ -2,7 +2,7 @@
 {% for new in news_list %}
 <div class="row featurette">
     <div class="col-md-4">
-                <img src="{{ new.urlToImage }}" width="500" height="250" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" >
+                <img src="{{ new.urlToImage }}" width="450" height="250" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" >
              </div>
              <div class="col-md-2"></div>
     <div class="col-md-6">
@@ -10,7 +10,7 @@
             {{ new.title | truncate(30)}}
         </h2>
         <p class="lead"> {{ new.description }} </p>
-        <a href="{{new.url}}" class="btn btn-warning" target="_blank">Read more</a>
+        <a href="{{new.url}}" class="btn btn-success" target="_blank">Read more</a>
     </div>
 </div>
 <hr class="featurette-divider">
